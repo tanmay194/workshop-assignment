@@ -11,8 +11,7 @@ app.use(cors({
   credentials: true
 }));
 
-// 2. Explicitly handle OPTIONS requests for all routes
-app.options('*', cors()); 
+
 
 app.use(express.json());
 
