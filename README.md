@@ -36,7 +36,3 @@ The user interface built with React and Vite.
 * `src/App.tsx` & `src/main.tsx`: Root components and application entry points.
 * `vite.config.ts`: Configuration for the Vite bundler.
 
-
-Open a terminal and navigate to the backend directory:
-```bash
-cd backend
