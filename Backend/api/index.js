@@ -4,7 +4,7 @@ dotenv.config(); // 1. Load variables from .env first!
 import dns from "node:dns";
 dns.setServers(["8.8.8.8", "1.1.1.1"]); // 2. Configure DNS
 
-import app from "./src/app.js";
+import app from "../src/app.js";
 import connectDB from "./src/config/db.js"; 
 
 connectDB();
