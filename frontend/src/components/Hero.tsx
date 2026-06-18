@@ -5,7 +5,7 @@ interface HeroProps {
 function Hero({ onEnrollClick }: HeroProps) {
   return (
     // Added pt-28 to provide spacing below the fixed Navbar
-    <header className="bg-gradient-to-br from-blue-900 to-blue-500 text-white py-20 px-5 text-center pt-28">
+    <header className="bg-linear-to-br from-blue-900 to-blue-500 text-white py-20 px-5 text-center pt-28">
       <div className="max-w-4xl mx-auto">
         <span className="bg-sky-400 text-blue-900 px-4 py-1.5 rounded-full text-sm font-bold uppercase inline-block mb-5">
           Summer 2026 Live Camp
