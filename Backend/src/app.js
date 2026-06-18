@@ -4,19 +4,18 @@ import enquiryRoutes from "./routes/enquiryRoutes.js";
 
 const app = express();
 
-// 1. Configure CORS
+// Use broad CORS settings to ensure preflight requests pass
 app.use(cors({
-  origin: "https://workshop-assignment1.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Ensure OPTIONS is here
-  credentials: true
+  origin: "*", // Using "*" initially to rule out origin-matching issues
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
-
-
 
 app.use(express.json());
 
 app.use('/api', enquiryRoutes);
 
+// Catch-all for 404s
 app.use((req, res) => {
   res.status(404).json({ success: false, message: "Route not found" });
 });
