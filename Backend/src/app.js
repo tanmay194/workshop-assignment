@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use('/api', enquiryRoutes);
 
-// Catch-all for 404s
+// Catch-all for 404s 
 app.use((req, res) => {
   res.status(404).json({ success: false, message: "Route not found" });
 });
