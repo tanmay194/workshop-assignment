@@ -1,0 +1,17 @@
+import dotenv from "dotenv";
+dotenv.config(); // 1. Load variables from .env first!
+
+import dns from "node:dns";
+dns.setServers(["8.8.8.8", "1.1.1.1"]); // 2. Configure DNS
+
+import app from "./src/app.js";
+import connectDB from "./src/config/db.js"; // 3. Import database connection
+
+// 4. Safely connect to the database now that MONGO_URI is guaranteed to be loaded
+connectDB();
+
+const PORT = process.env.PORT || 3000;
+    
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
